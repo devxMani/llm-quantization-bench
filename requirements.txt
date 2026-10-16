@@ -1,0 +1,12 @@
+# Unpinned on purpose. After your runs, pin the exact versions you used
+# (pip freeze > requirements.lock.txt) so your results are reproducible.
+#
+# llm-compressor and vLLM can pin conflicting transformers/torch versions.
+# If pip complains, use two virtual environments:
+#   env A: quantization   -> llmcompressor, transformers, datasets
+#   env B: serving + eval -> vllm, lm-eval[vllm]
+llmcompressor
+transformers
+datasets
+vllm
+lm-eval[vllm]
